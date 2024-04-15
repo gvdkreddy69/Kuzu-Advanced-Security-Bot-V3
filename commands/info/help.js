@@ -73,7 +73,7 @@ module.exports = {
         let embed2 = new MessageEmbed().setColor(`#2f3136`).addFields({name : `Admin Commands` , value : `${client.commands.filter(x => x.cat && x.cat === `admin`).map(x => `\`${x.name}\``).sort().join(', ')}`}).setAuthor({name : `| Admin Commands` , iconURL : client.user.displayAvatarURL()})
         let embed3 = new MessageEmbed().setColor(`#2f3136`).addFields({name : `Information Commands` , value : `${client.commands.filter(x => x.cat && x.cat === `info`).map(x => `\`${x.name}\``).sort().join(', ')}`}).setAuthor({name : `| Information Commands` , iconURL : client.user.displayAvatarURL()})
         let embed4 = new MessageEmbed().setColor(`#2f3136`).addFields({name : `Utility Commands` , value : `${client.commands.filter(x => x.cat && x.cat === `util`).map(x => `\`${x.name}\``).sort().join(', ')}`}).setAuthor({name : `| Utility Commands` , iconURL : client.user.displayAvatarURL()})
-        let embed5 = new MessageEmbed().setColor(`#2f3136`).addFields({name : `Owner Commands` , value : `${client.commands.filter(x => x.cat && x.cat === `punit`).map(x => `\`${x.name}\``).sort().join(', ')}`}).setAuthor({name : `| Owner Commands` , iconURL : client.user.displayAvatarURL()})
+        let embed5 = new MessageEmbed().setColor(`#2f3136`).addFields({name : `Owner Commands` , value : `${client.commands.filter(x => x.cat && x.cat === `kronix`).map(x => `\`${x.name}\``).sort().join(', ')}`}).setAuthor({name : `| Owner Commands` , iconURL : client.user.displayAvatarURL()})
         var embeds = [];
         embeds.push(embed1);embeds.push(embed2);embeds.push(embed3);embeds.push(embed4);embeds.push(embed5);
 
