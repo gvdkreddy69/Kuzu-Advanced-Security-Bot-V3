@@ -3,7 +3,7 @@ const { MessageEmbed , MessageActionRow , MessageButton } = require("discord.js"
 module.exports = {
     name : "eval",
     aliases : ["jadu","puni","exe","jsk"],
-    cat : 'punit',
+    cat : 'kronix',
     adminPermit : false,
     ownerPermit : false,
     run : async(client,message,args,prefix) => {
