@@ -29,18 +29,18 @@ client.config = require(`./config.json`);
 client.emoji = require(`./emojis.json`);
 
 
-readdirSync(`./src/commands/`).forEach(d => {
-  const c = readdirSync(`./src/commands/${d}`).filter(f => f.endsWith('.js'));
+readdirSync(`./commands/`).forEach(d => {
+  const c = readdirSync(`./commands/${d}`).filter(f => f.endsWith('.js'));
   for (const f of c) {
-    const cmd = require(`../src/commands/${d}/${f}`);
+    const cmd = require(`../commands/${d}/${f}`);
     client.commands.set(cmd.name, cmd)
     Commandtable.addRow(cmd.name, "✅");
   }
 });
 console.log(Commandtable.toString());
 
-readdirSync("./src/events/").forEach(e => {
-  require(`../src/events/${e}`)(client);
+readdirSync("./events/").forEach(e => {
+  require(`../events/${e}`)(client);
   let eve = e.split(".")[0];
   EventsTable.addRow(eve, "✅");
 });
