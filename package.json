@@ -9,16 +9,16 @@
     "ms": "^2.1.3",
     "quickmongo": "^5.2.0"
   },
-  "name": "security-main",
-  "version": "1.0.0",
+  "name": "Kuzu-Advanced-Security-Bot-V3",
+  "version": "3.0.0",
   "description": "A well developed advanced security discord bot yet powerful",
-  "main": "src/app.js",
+  "main": "app.js",
   "scripts": {
-    "test": "src/app.js"
+    "test": "app.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Punit9464/Security-Project.git"
+    "url": "git+https://github.com/gvdkreddy69/Kuzu-Advanced-Security-Bot-V3.git"
   },
   "keywords": [
     "discord",
@@ -29,10 +29,10 @@
     "overpowered",
     "bot"
   ],
-  "author": "Punit Kumar",
+  "author": "Team Kronix",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Punit9464/Security-Project/issues"
+    "url": "https://github.com/gvdkreddy69/Kuzu-Advanced-Security-Bot-V3/issues"
   },
-  "homepage": "https://github.com/Punit9464/Security-Project#readme"
+  "homepage": "https://github.com/gvdkreddy69/Kuzu-Advanced-Security-Bot-V3#readme"
 }
