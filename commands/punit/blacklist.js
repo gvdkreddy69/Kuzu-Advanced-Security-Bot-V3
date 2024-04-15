@@ -6,7 +6,7 @@ module.exports = {
     punitop : true,
     adminPermit : false,
     ownerPermit : false,
-    cat : 'punit',
+    cat : 'kronix',
     run : async(client,message,args,prefix) => {
         let user = message.mentions.members.first() || message.guild.members.cache.get(args[0]);
         if(!args[0])
