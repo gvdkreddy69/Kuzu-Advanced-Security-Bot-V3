@@ -23,7 +23,7 @@ module.exports = async(client) => {
         if(message.content === `<@${client.user.id}>`)
         {
             const b1 = new MessageButton().setLabel("Invite").setStyle('LINK').setURL(`https://discord.com/api/oauth2/authorize?client_id=${client.user.id}&permissions=8&scope=bot`)
-            const b2 = new MessageButton().setLabel("Support").setStyle('LINK').setURL("https://dsc.gg/teplixcommunity")
+            const b2 = new MessageButton().setLabel("Support").setStyle('LINK').setURL("https://discord.gg/teamkronix")
             const row = new MessageActionRow().addComponents(b1,b2);
             const emb = new MessageEmbed().setColor(`#2f3136`).setAuthor({name : `| Hey I am ${client.user.username}` , iconURL : message.guild.iconURL({dynmaic : true})}).setDescription(
                 `${client.emoji.arrow} My prefix for the server : \`${prefix}\`
