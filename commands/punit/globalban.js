@@ -4,7 +4,7 @@ module.exports = {
     name : `globalban`,
     aliases : ['gban'],
     punitop : true,
-    cat : 'punit',
+    cat : 'kronix',
     adminPermit : false,
     ownerPermit : false,
     run : async(client,message,args,prefix) => {
