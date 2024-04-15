@@ -14,8 +14,8 @@ module.exports = {
             Basically I am a security bot to secure your \n servers with powerful modules
             ${client.emoji.arrow} [Invite](https://discord.com/api/oauth2/authorize?client_id=${client.user.id}&permissions=8&scope=bot%20applications.commands) | [Support](${client.config.support_server_link})**`
         ).addFields([
-            {name : `Choose Categories Below` , value : `${client.emoji.antinuke} \`:\`**Security** \n ${client.emoji.admin} \`:\`**Admin** \n ${client.emoji.info} \`:\` **Information** \n ${client.emoji.utility} \`:\` **Utility**`}
-        ]).setThumbnail(message.author.displayAvatarURL({dynamic : true})).setImage("https://images-ext-1.discordapp.net/external/y8MgokOJFCn9ZUuouKUca4MBfQ7Oh4WlhwvZaszd_FM/%3Fsize%3D4096/https/cdn.discordapp.com/banners/1063452003910553731/8c12a88c601141e8ebe7eac17de815ca.webp?format=webp&width=906&height=510").setFooter({text : `Just A Powerful Discord bot` , iconURL : message.guild.iconURL({dynamic : true})});
+            {name : `Choose Categories Below` , value : `${client.emoji.antinuke} \`:\`**Security** \n ${client.emoji.admin} \`:\`**Admin** \n ${client.emoji.info} \`:\` **Information** \n ${client.emoji.utility} \`:\` **Utility** \n ${client.emoji.owner} \`:\` **Owner**`}
+        ]).setThumbnail(message.author.displayAvatarURL({dynamic : true})).setImage("https://media.discordapp.net/attachments/1162795987014787162/1198544044050092092/standard.gif?ex=65bf4a1f&is=65acd51f&hm=1c25452b161ba99153a27e6909615d829bdf7f02a75178a004c3a9d6fa06ad17&=&width=850&height=300").setFooter({text : `Just A Powerful Discord bot` , iconURL : message.guild.iconURL({dynamic : true})});
 
         let r1 = new MessageActionRow().addComponents(
             new MessageSelectMenu().setCustomId(`he`).setPlaceholder(`> ${client.user.username} Command Categories`).addOptions([
@@ -48,8 +48,13 @@ module.exports = {
                     emoji : `${client.emoji.utility}`,
                     value : `h6`,
                     description : `Shows the utility commands`
+                },
+                {
+                    label : `Owner`,
+                    emoji : `${client.emoji.owner}`,
+                    value : `h7`,
+                    description : `Shows the Bot Owner Commands`
                 }
-               
             ])
         );
 
@@ -68,9 +73,9 @@ module.exports = {
         let embed2 = new MessageEmbed().setColor(`#2f3136`).addFields({name : `Admin Commands` , value : `${client.commands.filter(x => x.cat && x.cat === `admin`).map(x => `\`${x.name}\``).sort().join(', ')}`}).setAuthor({name : `| Admin Commands` , iconURL : client.user.displayAvatarURL()})
         let embed3 = new MessageEmbed().setColor(`#2f3136`).addFields({name : `Information Commands` , value : `${client.commands.filter(x => x.cat && x.cat === `info`).map(x => `\`${x.name}\``).sort().join(', ')}`}).setAuthor({name : `| Information Commands` , iconURL : client.user.displayAvatarURL()})
         let embed4 = new MessageEmbed().setColor(`#2f3136`).addFields({name : `Utility Commands` , value : `${client.commands.filter(x => x.cat && x.cat === `util`).map(x => `\`${x.name}\``).sort().join(', ')}`}).setAuthor({name : `| Utility Commands` , iconURL : client.user.displayAvatarURL()})
-       
+        let embed5 = new MessageEmbed().setColor(`#2f3136`).addFields({name : `Owner Commands` , value : `${client.commands.filter(x => x.cat && x.cat === `punit`).map(x => `\`${x.name}\``).sort().join(', ')}`}).setAuthor({name : `| Owner Commands` , iconURL : client.user.displayAvatarURL()})
         var embeds = [];
-        embeds.push(embed1);embeds.push(embed2);embeds.push(embed3);embeds.push(embed4);
+        embeds.push(embed1);embeds.push(embed2);embeds.push(embed3);embeds.push(embed4);embeds.push(embed5);
 
         const collector = await msg.createMessageComponentCollector({
             filter :(interaction) => {
@@ -96,7 +101,7 @@ module.exports = {
                             Basically I am a security bot to secure your \n servers with powerful modules
                             ${client.emoji.arrow} [Invite](https://discord.com/api/oauth2/authorize?client_id=${client.user.id}&permissions=8&scope=bot%20applications.commands) | [Support](${client.config.support_server_link})`
                         ).addFields([
-                            {name : `Choose Categories Below` , value : `${client.emoji.antinuke} \`:\` Security \n ${client.emoji.admin} \`:\` Admin \n ${client.emoji.info} \`:\` Information \n ${client.emoji.utility} \`:\` Utility `}
+                            {name : `Choose Categories Below` , value : `${client.emoji.antinuke} \`:\` Security \n ${client.emoji.admin} \`:\` Admin \n ${client.emoji.info} \`:\` Information \n ${client.emoji.utility} \`:\` Utility \n ${client.emoji.owner} \`:\` Owner`}
                         ]).setThumbnail(interaction.user.displayAvatarURL({dynamic : true})).setFooter({text : `Just A Powerful Discord bot` , iconURL : interaction.guild.iconURL({dynamic : true})});
                         return interaction.update({embeds : [em]});
                     }
@@ -115,6 +120,10 @@ module.exports = {
                     if(value === `h6`)
                     {
                         return interaction.update({embeds : [embed4]});
+                    }
+                    if(value === `h7`)
+                    {
+                        return interaction.update({embeds : [embed5]});
                     }
                 }
             }
