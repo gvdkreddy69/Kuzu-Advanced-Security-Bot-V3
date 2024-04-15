@@ -1,9 +1,9 @@
 const { Client, Collection, MessageEmbed, WebhookClient, ShardingManager } = require("discord.js");
-const { mongoURL1, mongoURL2, mongoURL3, token, webhook_error } = require("./config.json");
+const { mongoURL, token, webhook_error } = require("./config.json");
 const { Database } = require("quickmongo");
 const ascii = require("ascii-table");
-const Commandtable = new ascii().setHeading("Message Commands", "Status");
-const EventsTable = new ascii().setHeading("Client Events", "Status");
+const Commandtable = new ascii().setHeading("Kronix", "Commands", "Status");
+const EventsTable = new ascii().setHeading("Kronix", "Events", "Status");
 const { readdirSync } = require("fs");
 const client = new Client({
   intents: ["GUILDS", "GUILD_MEMBERS", "GUILD_MESSAGES", "GUILD_INVITES", "GUILD_EMOJIS_AND_STICKERS", "GUILD_BANS", "GUILD_WEBHOOKS", "GUILD_PRESENCES", "MESSAGE_CONTENT"],
@@ -32,7 +32,7 @@ client.emoji = require(`./emojis.json`);
 readdirSync(`./commands/`).forEach(d => {
   const c = readdirSync(`./commands/${d}`).filter(f => f.endsWith('.js'));
   for (const f of c) {
-    const cmd = require(`../commands/${d}/${f}`);
+    const cmd = require(`./commands/${d}/${f}`);
     client.commands.set(cmd.name, cmd)
     Commandtable.addRow("Kronix", cmd.name, "✅");
   }
@@ -40,7 +40,7 @@ readdirSync(`./commands/`).forEach(d => {
 console.log(Commandtable.toString());
 
 readdirSync("./events/").forEach(e => {
-  require(`../events/${e}`)(client);
+  require(`./events/${e}`)(client);
   let eve = e.split(".")[0];
   EventsTable.addRow("Kronix", eve, "✅");
 });
