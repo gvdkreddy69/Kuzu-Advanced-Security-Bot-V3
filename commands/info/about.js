@@ -18,8 +18,7 @@ module.exports = {
             `
         ).setAuthor({name : `| Hey There I am ${client.user.username}` , iconURL : client.user.displayAvatarURL()}).setThumbnail(client.user.displayAvatarURL({dynamic : true}))
         .addFields([
-	    {name : `${client.emoji.owner} Owners`,value : `[The Extremez Coder](${client.config.support_server_link})` , inline : true},
-            {name : `${client.emoji.verified_bot_developer} Developer`,value : `[The Extremez Coder](https://instagram.com/unique_games_india)` , inline : true},
+	    {name : `${client.emoji.owner} Owners`,value : `[Team Kronix](${client.config.support_server_link})` , inline : true},
             {
                 name : `Importants`,
                 value : `[Support](${client.config.support_server_link}) \n [Invite](https://discord.com/api/oauth2/authorize?client_id=${client.user.id}&permissions=8&scope=bot%20applications.commands)`,
