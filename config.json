@@ -1,0 +1,9 @@
+{
+    "prefix" : ".",
+    "webhook_error" : "https://discord.com/api/webhooks/1197910902209519656/UJgGmrOdErrJSL-vKo5QqE4f5tjmQHlnIUczRKM3iHIxHVM3sG5-xV-nliqTyOfxzKAF",
+    "mongoURL" : "mongodb+srv://Jarvis:nitrixexe@cluster0.bxzzf70.mongodb.net/?retryWrites=true&w=majority",
+    "owner" : ["1173547185758015498"],
+    "gban_channel_id" : "1197558557348999288",
+    "support_server_link" : "https://discord.gg/RKujGvuENz",
+    "guildLogs" : "1197558557348999288"
+}
