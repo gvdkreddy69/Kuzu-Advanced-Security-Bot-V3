@@ -34,7 +34,7 @@ readdirSync(`./commands/`).forEach(d => {
   for (const f of c) {
     const cmd = require(`../commands/${d}/${f}`);
     client.commands.set(cmd.name, cmd)
-    Commandtable.addRow(cmd.name, "✅");
+    Commandtable.addRow("Kronix", cmd.name, "✅");
   }
 });
 console.log(Commandtable.toString());
@@ -42,7 +42,7 @@ console.log(Commandtable.toString());
 readdirSync("./events/").forEach(e => {
   require(`../events/${e}`)(client);
   let eve = e.split(".")[0];
-  EventsTable.addRow(eve, "✅");
+  EventsTable.addRow("Kronix", eve, "✅");
 });
 console.log(EventsTable.toString());
 
@@ -57,4 +57,4 @@ process.on("uncaughtException", (er) => {
   web.send({ embeds: [new MessageEmbed().setColor(`#2f3136`).setDescription(`\`\`\`js\n${er}\`\`\``)] })
 })
 
-require("http").createServer((_, r) => r.end("Bot is online!")).listen(8080)
+require("http").createServer((_, r) => r.end("Kronix | Bot is online!")).listen(8080)
