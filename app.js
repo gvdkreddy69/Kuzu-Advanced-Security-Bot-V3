@@ -46,7 +46,7 @@ readdirSync("./events/").forEach(e => {
 });
 console.log(EventsTable.toString());
 
-client.login(process.env.token);
+client.login(client.config.token);
 const web = new WebhookClient({ url: webhook_error })
 process.on("unhandledRejection", (err) => {
   console.error(err)
