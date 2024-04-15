@@ -58,6 +58,12 @@ module.exports = {
             description: `Shows Antinuke and Security Commands`,
           },
           {
+            label : `Admin`,
+            emoji : `${client.emoji.admin}`,
+            value : `h3`,
+            description : `Shows the Administrator Commands`
+          },
+          {
             label: `Information`,
             emoji: `${client.emoji.info}`,
             value: `h5`,
@@ -121,7 +127,7 @@ module.exports = {
         name: `| Security Commands`,
         iconURL: client.user.displayAvatarURL(),
       });
-
+    let embed2 = new MessageEmbed().setColor(`#2f3136`).addFields({name : `Admin Commands` , value : `${client.commands.filter(x => x.cat && x.cat === `admin`).map(x => `\`${x.name}\``).sort().join(', ')}`}).setAuthor({name : `| Admin Commands` , iconURL : client.user.displayAvatarURL()})
     let embed3 = new MessageEmbed()
       .setColor(`#2f3136`)
       .addFields({
@@ -218,7 +224,10 @@ module.exports = {
           if (value === `h2`) {
             return interaction.update({ embeds: [embed1] });
           }
-
+          if(value === `h3`)
+          {
+            return interaction.update({embeds : [embed2]});
+          }
           if (value === `h5`) {
             return interaction.update({ embeds: [embed3] });
           }
