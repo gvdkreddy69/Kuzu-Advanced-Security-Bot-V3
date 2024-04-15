@@ -15,7 +15,7 @@ module.exports = {
             ${client.emoji.arrow} [Invite](https://discord.com/api/oauth2/authorize?client_id=${client.user.id}&permissions=8&scope=bot%20applications.commands) | [Support](${client.config.support_server_link})**`
         ).addFields([
             {name : `Choose Categories Below` , value : `${client.emoji.antinuke} \`:\`**Security** \n ${client.emoji.admin} \`:\`**Admin** \n ${client.emoji.info} \`:\` **Information** \n ${client.emoji.utility} \`:\` **Utility** \n ${client.emoji.owner} \`:\` **Owner**`}
-        ]).setThumbnail(message.author.displayAvatarURL({dynamic : true})).setImage("https://media.discordapp.net/attachments/1162795987014787162/1198544044050092092/standard.gif?ex=65bf4a1f&is=65acd51f&hm=1c25452b161ba99153a27e6909615d829bdf7f02a75178a004c3a9d6fa06ad17&=&width=850&height=300").setFooter({text : `Just A Powerful Discord bot` , iconURL : message.guild.iconURL({dynamic : true})});
+        ]).setThumbnail(message.author.displayAvatarURL({dynamic : true})).setImage("https://images-ext-1.discordapp.net/external/y8MgokOJFCn9ZUuouKUca4MBfQ7Oh4WlhwvZaszd_FM/%3Fsize%3D4096/https/cdn.discordapp.com/banners/1063452003910553731/8c12a88c601141e8ebe7eac17de815ca.webp?format=webp&width=906&height=510").setFooter({text : `Just A Powerful Discord bot` , iconURL : message.guild.iconURL({dynamic : true})});
 
         let r1 = new MessageActionRow().addComponents(
             new MessageSelectMenu().setCustomId(`he`).setPlaceholder(`> ${client.user.username} Command Categories`).addOptions([
