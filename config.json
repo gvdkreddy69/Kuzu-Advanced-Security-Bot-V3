@@ -1,10 +1,10 @@
 {
-    "token": "",
+    "token": "MTEyOTI4MDg0NTA3NzgxNTMxNg.G-gYo1.4JU_-tyx_7xGNiie2BNDOJWD8zKgYdSGNkxRfQ",
     "prefix" : ".",
-    "webhook_error" : "",
-    "mongoURL" : "",
-    "owner" : ["1180995684380459018"],
-    "gban_channel_id" : "",
+    "webhook_error" : "https://discord.com/api/webhooks/1259377059185037362/dnwduTfLn18SS00AfBe7KCMjlln5Te-ucJOEdp9QpXGT9wauXjPYziz75uqWyiU7_jSC",
+    "mongoURL" : "mongodb+srv://Kronix1:arjun@cluster0.ob9wwsc.mongodb.net/?retryWrites=true&w=majority",
+    "owner" : ["628210756311056404"],
+    "gban_channel_id" : "1257203793028845631",
     "support_server_link" : "https://discord.gg/teamkronix",
-    "guildLogs" : ""
+    "guildLogs" : "1257203793028845631"
 }
